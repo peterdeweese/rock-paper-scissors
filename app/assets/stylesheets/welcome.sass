@@ -5,7 +5,6 @@ body
 
 a
   text-decoration: none
-
 @font-face
   font-family: Snake
   src: url('fonts/snake.ttf')
@@ -30,7 +29,6 @@ $slide-text-width: 230px
   position: relative
   width: $slide-size
   height: $slide-size
-  font-family: Snake, Trebuchet MS, Helvetica, sans-serif
   color: rgb(35%, 35%, 35%)
   &:hover
     .info
@@ -44,6 +42,8 @@ $slide-text-width: 230px
     left: ($slide-size - $slide-text-width) / 2
     align: center
     vertical-align: middle
+  .title, .description
+    font-family: Snake, Trebuchet MS, Helvetica, sans-serif
   .title
     top: 5px
     font-size: 3.5em
@@ -56,11 +56,12 @@ $slide-text-width: 230px
     display: none
     top: 0px
     left: 0px
-    width: $slide-size
-    height: $slide-size
-    background-color: rgba(white, 0.9)
-    font-size: 2em
-    line-height: 0.7em
+    padding: 30px
+    width: $slide-size - 60
+    height: $slide-size - 60
+    background-color: rgba(white, 0.95)
+    text-align: justify
+    font-size: 1.2em
 
 .stackoverflow
   float: right
