@@ -1,0 +1,41 @@
+#content{
+margin-top:90px;
+width:916px;
+padding:20px 35px;
+float:left;
+}
+#content p a{
+color:#fff;
+text-decoration:underline;
+}
+#content p{
+float:left;clear:left;
+color:#a9a9a9;
+font-size:0.8em;
+line-height:1.7em;
+padding:10px 0;
+width:916px;
+}
+#content p.intro{
+font-weight:bold;
+font-size:1em;
+}
+#content h2,#content h3,#content h4{
+float:left;clear:left;
+padding-top:25px;
+width:700px;
+}
+#content h2{
+font-size:1.5em;
+line-height:1.5em;
+padding:15px 0 0 0;
+}
+#content h3{font-size:1.3em;}
+#content h4{
+font-weight:bold;
+font-size:1.2em;
+}
+#content .download{
+margin:20px 0;
+float:left
+}

@@ -1,0 +1,110 @@
+/*TAG RECLASS*//*TAG RECLASS*//*TAG RECLASS*//*TAG RECLASS*//*TAG RECLASS*//*TAG RECLASS*//*TAG RECLASS*/
+
+*{
+margin:0;padding:0;
+font:1em/1.4em Arial, Verdana, Helvetica, sans-serif;
+color:#333;
+}
+body{background:#fff url(../images/bg/bg-body.gif) repeat-x left top;}
+a{
+text-decoration:none;
+outline:none;
+padding:0 1px;
+}
+strong{font-weight:bold;}
+a img{border:none;}
+a:hover{text-decoration:none;}
+h2,h3,h3 a{
+font-weight:bold;
+}
+h1{
+background:url(../images/logo.png) no-repeat left top;
+position:absolute;
+top:2px;left:4px;
+color:#323232;
+height:61px;
+padding:21px 10px 0 80px;
+font-size:1.7em;
+line-height:1.15em;
+font-weight:bold;
+z-index:3;
+}
+h2{
+font-size:1.1em;line-height:1.1em;
+font-weight:bold;
+float:left;clear:left;
+padding:15px 15px 15px 45px;
+color:#333;
+}
+h2.head{
+font-size:32px;line-height:1.2em;
+padding:104px 0 8px 263px;
+width:440px;
+}
+
+/*STRUCTURE*//*STRUCTURE*//*STRUCTURE*//*STRUCTURE*//*STRUCTURE*//*STRUCTURE*//*STRUCTURE*//*STRUCTURE*//*STRUCTURE*/
+
+#wrap{
+width:986px;
+margin:0 auto;
+position:relative;
+z-index:3;
+}
+
+/*Promo area*//*Promo area*//*Promo area*//*Promo area*//*Promo area*//*Promo area*/
+
+.phone-hold{
+width:606px;height:305px;
+float:left;clear:left;
+position:relative;
+margin-left:148px;
+margin-top:11px;
+}
+.phone-hold img.screenshot{
+position:absolute;
+left:190px;top:37px;
+padding:0;
+}
+a.download{
+display:block;
+height:52px;width:210px;
+padding-left:221px;
+padding-top:6px;
+margin-left:266px;
+background:url(../images/btn/download.png) no-repeat left bottom;
+clear:left;
+color:#4c4c4c;
+font-size:0.65em;
+line-height:1.4em;
+}
+a.download strong{color:#4c4c4c;}
+a.download:hover{background-position:left top;}
+p.sub{
+float:left;clear:left;
+color:#515151;
+font-size:1.1em;line-height:1.7em;
+padding:5px 0 0 263px;
+width:460px;
+}
+p.sub a{
+text-decoration:underline;
+color:#515151;
+}
+
+/*EXTRAS*//*EXTRAS*//*EXTRAS*//*EXTRAS*//*EXTRAS*//*EXTRAS*//*EXTRAS*//*EXTRAS*//*EXTRAS*/
+
+.clearboth{clear:both;}
+#app-store{
+display:block;
+width:187px;height:60px;
+background:url(../images/btn/appstore.png) no-repeat left top;
+position:absolute;
+z-index:4;
+right:5px;top:9px;
+}
+.app-store{
+display:block;
+width:187px;height:60px;
+background:url(../images/btn/appstore.png) no-repeat left top;
+margin-top:12px;
+}

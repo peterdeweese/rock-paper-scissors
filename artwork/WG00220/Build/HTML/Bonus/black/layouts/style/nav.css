@@ -1,0 +1,64 @@
+#mast{
+background:url(../images/bg/bg-mast.gif) repeat-x left top;
+height:81px;width:100%;
+position:absolute;
+top:0;left:0;
+z-index:5;
+}
+div.c{
+position:relative;
+width:986px;
+margin:0 auto;
+}
+/*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*//*NAV*/
+#nav-wrap{
+position:absolute;
+z-index:3;
+right:200px;top:0;
+height:87px;
+}
+#primary-nav{
+padding-top:12px;
+margin-left:1em;
+}
+#primary-nav li{
+float:left;display:inline;
+font-size:1.1em;
+}
+#primary-nav li a{
+display:block;
+text-decoration:none;
+font-weight:bold;
+font-size:1em;
+padding:2px 22px 0 22px;
+color:#fff;
+height:27px;
+margin:0;
+}
+#primary-nav li a:hover,#primary-nav li.on a{background:url(../images/nav-on-left.gif) no-repeat left top;}
+#primary-nav li:hover,#primary-nav li.on{background:url(../images/nav-on-right.gif) no-repeat right top;}
+
+/*Secondary Nav*//*Secondary Nav*//*Secondary Nav*//*Secondary Nav*//*Secondary Nav*//*Secondary Nav*//*Secondary Nav*/
+
+#secondary-nav{
+font-size:0.75em;
+float:left;clear:left;
+padding:7px 0 0 16px;
+}
+#secondary-nav li{
+float:left;
+display:inline;
+list-style-type:none;
+}
+#secondary-nav a{
+display:block;
+line-height:1.3em;
+color:#fff;
+height:27px;
+padding:2px 11px 0 11px;
+}
+#secondary-nav a:active{}
+#secondary-nav li.on a{
+background:url(../images/nav-2-on-left.gif) no-repeat left top;
+}
+#secondary-nav li.on{background:url(../images/nav-2-on-right.gif) no-repeat right top;}
