@@ -12,18 +12,19 @@ a
 $slide-size: 262.5px
 $slide-text-width: 230px
 .header, .slides
-  min-width: 600
-  max-width: 960px
-  text-align: center
+  min-width: $slide-size * 2 + 10
+  max-width: $slide-size * 3 + 10
   margin-left: auto
   margin-right: auto
-  background-color: gray
 .header
   h1
     font-size: 60px
     color: black
     letter-spacing: 0.2em
     text-shadow: 2px 2px 30px #d0d0d0
+.slides
+  margin-left: auto
+  margin-right: auto
 .section
   display: inline-block
   position: relative
