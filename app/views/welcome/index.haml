@@ -1,0 +1,29 @@
+%html
+  %head
+    %link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}/
+    %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+    %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js")
+    %script(type="text/javascript" src="javascript/jquery.tweet.js")
+    %script(type="text/javascript" src="javascript/index.js")
+    %title Peter DeWeese
+  %body
+    .header
+      %a.stackoverflow{:href => "http://stackexchange.com/users/d0914c5748014de488165cc0acf51de0"}
+        %img{:alt => "profile for Peter DeWeese on Stack Exchange, a network of free, community-driven Q&A sites", :height => "58", :src => "http://stackexchange.com/users/flair/d0914c5748014de488165cc0acf51de0.png", :title => "profile for Peter DeWeese on Stack Exchange, a network of free, community-driven Q&A sites", :width => "208"}
+      %h1 Peter DeWeese
+    .slides
+      .section
+        %img.slide{:src => "assets/slide_SwimScore.png"}/
+        .title Swim Score
+        .description Score dual swim meets for DC area summer teams.
+        .info General info
+      .section
+        %img.slide{:src => "assets/slide_PaceClock.png"}/
+        .title Pace Clock
+        .description Just like the one at your competition pool.
+        .info General info
+      .section
+        %img.slide{:src => "assets/slide_SwimScore.png"}/
+        .title LaserTrack
+        .description LaserShip package tracker.
+        .info Discontinued, as general package trackers now support LaserShip. Try <a href="http://itunes.apple.com/us/app/parcel/id375589283?mt=8">Parcel</a> or <a href="http://itunes.apple.com/us/app/delivery-status-touch-package/id290986013?mt=8">Delivery Status touch</a>.

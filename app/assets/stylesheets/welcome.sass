@@ -1,0 +1,66 @@
+body
+  font-family: Trebuchet MS, Helvetica, sans-serif
+  padding-top: 5px
+  background: #fff
+
+a
+  text-decoration: none
+
+@font-face
+  font-family: Snake
+  src: url('fonts/snake.ttf')
+$slide-size: 262.5px
+$slide-text-width: 230px
+.header, .slides
+  min-width: 600
+  max-width: 960px
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  background-color: gray
+.header
+  h1
+    font-size: 60px
+    color: black
+    letter-spacing: 0.2em
+    text-shadow: 2px 2px 30px #d0d0d0
+.section
+  display: inline-block
+  position: relative
+  width: $slide-size
+  height: $slide-size
+  font-family: Snake, Trebuchet MS, Helvetica, sans-serif
+  color: rgb(35%, 35%, 35%)
+  &:hover
+    .info
+      display: block
+  img.slide
+    width: $slide-size
+    height: $slide-size
+  > div
+    position: absolute
+    width: $slide-text-width
+    left: ($slide-size - $slide-text-width) / 2
+    align: center
+    vertical-align: middle
+  .title
+    top: 5px
+    font-size: 3.5em
+    text-align: center
+  .description
+    top: 208px
+    font-size: 2em
+    line-height: 0.7em
+  .info
+    display: none
+    top: 0px
+    left: 0px
+    width: $slide-size
+    height: $slide-size
+    background-color: rgba(white, 0.9)
+    font-size: 2em
+    line-height: 0.7em
+
+.stackoverflow
+  float: right
+  opacity: .9
