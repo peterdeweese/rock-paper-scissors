@@ -3,6 +3,8 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 
+gem 'rails_12factor'
+
 gem 'pg'
 
 gem 'haml', '~> 4.0.3'
