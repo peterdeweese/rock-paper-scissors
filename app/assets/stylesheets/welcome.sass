@@ -1,3 +1,7 @@
+@import "compass/css3/transform"
+@import "compass/css3/transition"
+@import "compass/css3/border-radius"
+
 body
   font-family: Trebuchet MS, Helvetica, sans-serif
   padding-top: 5px
@@ -25,45 +29,60 @@ $slide-text-width: 230px
 .slides
   margin-left: auto
   margin-right: auto
-.section
-  display: inline-block
-  position: relative
-  width: $slide-size
-  height: $slide-size
-  color: rgb(35%, 35%, 35%)
-  &:hover
-    .info
-      display: block
-  img.slide
+  @include perspective(1000)
+  .slide
+    display: inline-block
+    position: relative
     width: $slide-size
     height: $slide-size
-  > div
-    position: absolute
-    width: $slide-text-width
-    left: ($slide-size - $slide-text-width) / 2
-    align: center
-    vertical-align: middle
-  .title, .description
-    font-family: Snake, Trebuchet MS, Helvetica, sans-serif
-  .title
-    top: 5px
-    font-size: 3.5em
-    text-align: center
-  .description
-    top: 208px
-    font-size: 2em
-    line-height: 0.7em
-  .info
-    display: none
-    top: 0px
-    left: 0px
-    padding: 30px
-    width: $slide-size - 60
-    height: $slide-size - 60
-    background-color: rgba(white, 0.95)
-    text-align: justify
-    font-size: 1.2em
+    color: rgb(35%, 35%, 35%)
+    @include perspective(1000)
+    .front, .back
+      @include backface-visibility(hidden)
+      @include transition(0.6s)
+      @include transform-style
+      position: absolute
 
+    .front
+      z-index: 5
+      @include rotateY(0deg)
+      > div
+        @include backface-visibility(hidden)
+        position: absolute
+        width: $slide-text-width
+        left: ($slide-size - $slide-text-width) / 2
+        align: center
+        vertical-align: middle
+      img.slide
+        width: 100%
+        height: 100%
+      .title, .description
+        font-family: Snake, Trebuchet MS, Helvetica, sans-serif
+      .title
+        top: 5px
+        font-size: 3.5em
+        text-align: center
+      .description
+        top: 208px
+        font-size: 2em
+        line-height: 0.7em
+    .back
+      z-index: 0
+      @include rotateY(-180deg)
+      width: $slide-size - 60 - 6
+      height: $slide-size - 60 - 6
+      margin: 3px
+      padding: 30px
+      @include border-radius(6px)
+      background-color: hsl(0, 0%, 88%)
+      text-align: justify
+      font-size: 1.2em
+    &:hover .front
+      z-index: 5
+      @include rotateY(180deg)
+    &:hover .back
+      z-index: 10
+      @include rotateY(0deg)
 .stackoverflow
   float: right
   opacity: .9
