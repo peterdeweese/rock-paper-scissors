@@ -39,7 +39,7 @@ $slide-text-width: 230px
     @include perspective(1000)
     .front, .back
       @include backface-visibility(hidden)
-      @include transition(0.6s)
+      @include transition(0.9s)
       @include transform-style
       position: absolute
 
@@ -74,15 +74,16 @@ $slide-text-width: 230px
       margin: 3px
       padding: 30px
       @include border-radius(6px)
-      background-color: hsl(0, 0%, 88%)
+      background-color: hsla(0, 0%, 88%, 0.8)
       text-align: justify
       font-size: 1.2em
-    &:hover .front
-      z-index: 5
-      @include rotateY(180deg)
-    &:hover .back
-      z-index: 10
-      @include rotateY(0deg)
+    &:hover
+      .front
+        z-index: 5
+        @include rotateY(180deg)
+      .back
+        z-index: 10
+        @include rotateY(0deg)
 .stackoverflow
   float: right
   opacity: .9
