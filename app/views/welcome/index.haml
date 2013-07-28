@@ -1,47 +1,41 @@
-%html
-  %head
-    %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-    %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js")
-    %title Peter DeWeese
-  %body
-    .header
-      %a.stackoverflow{:href => "http://stackexchange.com/users/d0914c5748014de488165cc0acf51de0"}
-        %img{:alt => "profile for Peter DeWeese on Stack Exchange, a network of free, community-driven Q&A sites", :height => "58", :src => "http://stackexchange.com/users/flair/d0914c5748014de488165cc0acf51de0.png", :title => "profile for Peter DeWeese on Stack Exchange, a network of free, community-driven Q&A sites", :width => "208"}
-      %h1 Peter DeWeese
-    .slides
-      %div
-        .slide
-          .front
-            %img.slide{:src => "#{asset_path('slide_WebThumb.png')}"}/
-            .title Web Thumb
-            .description Create thumbnails from mobile websites.
-          .back
-            Available in the
-            %a{href:"https://itunes.apple.com/us/app/web-thumb/id674691616?ls=1&mt=8"} app store
-            for iPhone.
-        .slide
-          .front
-            %img.slide{:src => "#{asset_path('slide_SwimScore.png')}"}/
-            .title Swim Score
-            .description Score dual swim meets for DC area summer teams.
-          .back
-            Available in the
-            %a{href:"https://itunes.apple.com/us/app/swim-score/id521595188?mt=8"} app store
-            for iPhone and iPad.
-        .slide
-          .front
-            %img.slide{src:"#{asset_path('slide_PaceClock.png')}"}/
-            .title Pace Clock
-            .description Just like the one at your competition pool.
-          .back
-            Available in the app store for
-            %a{href:"https://itunes.apple.com/us/app/pace-clock/id463105064?mt=12"}Mac,
-            %a{href:"https://itunes.apple.com/us/app/pace-clock/id465060982?mt=8"}iPhone, and iPad.
-        .slide
-          .front
-            %img.slide{:src => "#{asset_path('slide_LaserTrack.png')}"}/
-            .title LaserTrack
-            .description LaserShip package tracker.
-          .back
-            Discontinued, as other package trackers now support LaserShip. Try <a href="http://itunes.apple.com/us/app/parcel/id375589283?mt=8">Parcel</a> or <a href="http://itunes.apple.com/us/app/delivery-status-touch-package/id290986013?mt=8">Delivery Status touch</a>.
-      %a{href:"mailto:support@dewee.se"}Product Support
+.header
+  %a.stackoverflow{:href => "http://stackexchange.com/users/d0914c5748014de488165cc0acf51de0"}
+    %img{:alt => "profile for Peter DeWeese on Stack Exchange, a network of free, community-driven Q&A sites", :height => "58", :src => "http://stackexchange.com/users/flair/d0914c5748014de488165cc0acf51de0.png", :title => "profile for Peter DeWeese on Stack Exchange, a network of free, community-driven Q&A sites", :width => "208"}
+  %h1 Peter DeWeese
+.slides
+  %div
+    .slide
+      .front
+        %img.slide{:src => "#{asset_path('slide_WebThumb.png')}"}/
+        .title Web Thumb
+        .description Create thumbnails from mobile websites.
+      .back
+        Available in the
+        %a{href:"https://itunes.apple.com/us/app/web-thumb/id674691616?ls=1&mt=8"} app store
+        for iPhone.
+    .slide
+      .front
+        %img.slide{:src => "#{asset_path('slide_SwimScore.png')}"}/
+        .title Swim Score
+        .description Score dual swim meets for DC area summer teams.
+      .back
+        Available in the
+        %a{href:"https://itunes.apple.com/us/app/swim-score/id521595188?mt=8"} app store
+        for iPhone and iPad.
+    .slide
+      .front
+        %img.slide{src:"#{asset_path('slide_PaceClock.png')}"}/
+        .title Pace Clock
+        .description Just like the one at your competition pool.
+      .back
+        Available in the app store for
+        %a{href:"https://itunes.apple.com/us/app/pace-clock/id463105064?mt=12"}Mac,
+        %a{href:"https://itunes.apple.com/us/app/pace-clock/id465060982?mt=8"}iPhone, and iPad.
+    .slide
+      .front
+        %img.slide{:src => "#{asset_path('slide_LaserTrack.png')}"}/
+        .title LaserTrack
+        .description LaserShip package tracker.
+      .back
+        Discontinued, as other package trackers now support LaserShip. Try <a href="http://itunes.apple.com/us/app/parcel/id375589283?mt=8">Parcel</a> or <a href="http://itunes.apple.com/us/app/delivery-status-touch-package/id290986013?mt=8">Delivery Status touch</a>.
+  %a{href:"mailto:support@dewee.se"}Product Support
