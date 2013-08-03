@@ -15,37 +15,56 @@ a
   
 $slide-size: 262.5px
 $slide-text-width: 230px
+
+.text
+  padding-left: 3px
+
 .header, .slides
   min-width: $slide-size * 2 + 10
   max-width: $slide-size * 3 + 10
   margin-left: auto
   margin-right: auto
+  margin-top: 10px
 .header
   h1
     font-size: 60px
     color: black
     letter-spacing: 0.2em
     text-shadow: 2px 2px 30px #d0d0d0
+
+.flippable
+  @include perspective(1000)
+  .front, .back
+    @include backface-visibility(hidden)
+    @include transition(0.9s)
+    @include transform-style
+    position: absolute
+  .front
+    z-index: 5
+    @include rotateY(0deg)
+  .back
+    z-index: 0
+    @include rotateY(-180deg)
+  &:hover
+    .front
+      z-index: 5
+      @include rotateY(180deg)
+    .back
+      z-index: 10
+      @include rotateY(0deg)
+
 .slides
   margin-left: auto
   margin-right: auto
-  @include perspective(1000)
+  
   .slide
+    @extend .flippable
     display: inline-block
     position: relative
     width: $slide-size
     height: $slide-size
     color: rgb(35%, 35%, 35%)
-    @include perspective(1000)
-    .front, .back
-      @include backface-visibility(hidden)
-      @include transition(0.9s)
-      @include transform-style
-      position: absolute
-
     .front
-      z-index: 5
-      @include rotateY(0deg)
       > div
         @include backface-visibility(hidden)
         position: absolute
@@ -67,8 +86,6 @@ $slide-text-width: 230px
         font-size: 2em
         line-height: 0.7em
     .back
-      z-index: 0
-      @include rotateY(-180deg)
       width: $slide-size - 60 - 6
       height: $slide-size - 60 - 6
       margin: 3px
@@ -78,13 +95,7 @@ $slide-text-width: 230px
       color: black
       text-align: justify
       font-size: 1.2em
-    &:hover
-      .front
-        z-index: 5
-        @include rotateY(180deg)
-      .back
-        z-index: 10
-        @include rotateY(0deg)
+
 .stackoverflow
   float: right
   opacity: .9
