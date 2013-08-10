@@ -35,14 +35,16 @@ $slide-text-width: 230px
 .flippable
   @include perspective(1000)
   .front, .back
-    @include backface-visibility(hidden)
     @include transition(0.9s)
     @include transform-style
     position: absolute
+    div
+      @include backface-visibility(hidden)
   .front
     z-index: 5
     @include rotateY(0deg)
   .back
+    @include backface-visibility(hidden)
     z-index: 0
     @include rotateY(-180deg)
   &:hover
@@ -66,7 +68,6 @@ $slide-text-width: 230px
     color: rgb(35%, 35%, 35%)
     .front
       > div
-        @include backface-visibility(hidden)
         position: absolute
         width: $slide-text-width
         left: ($slide-size - $slide-text-width) / 2
