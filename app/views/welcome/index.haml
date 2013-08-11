@@ -3,8 +3,10 @@
   %p
     %form{action:"throw"}
       %b Choose wisely:
-      %select
+      %select{name:'user_choice'}
         %option Rock
         %option Paper
         %option Scissors
       = submit_tag 'Throw!'
+  - unless flash[:notice].blank?
+    %p.flash= flash[:notice]

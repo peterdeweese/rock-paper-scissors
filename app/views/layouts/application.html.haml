@@ -1,11 +1,9 @@
 !!!
 %html
   %head
-    %title Peter DeWeese
+    %title Rock Paper Scissors
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-    %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-    %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js")
   %body
     = yield
