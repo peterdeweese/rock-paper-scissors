@@ -1,12 +1,19 @@
 .main
-  %h1 Rock Paper Scissors
+  %h1 Rock Paper Scissors Deathmatch
+  - if @result
+    %p
+      %b.result-label You:
+      %img.weapon{:src => "#{asset_path("#{@user_choice}.png")}"}
+    %p
+      %b.result-label Enemy:
+      %img.weapon{:src => "#{asset_path("#{@enemy_choice}.png")}"}
+    %h1 You #{@result}!
   %p
-    %form{action:"throw"}
-      %b Choose wisely:
-      %select{name:'user_choice'}
-        %option Rock
-        %option Paper
-        %option Scissors
-      = submit_tag 'Throw!'
-  - unless flash[:notice].blank?
-    %p.flash= flash[:notice]
+    - if @result
+      %b Play again! 
+    %b Choose your weapon:
+  %p
+    - @options.each do |option|
+      %a.weapon{href:"throw?user_choice=#{option}"}
+        %img.weapon{:src => "#{asset_path("#{option}.png")}"}
+        

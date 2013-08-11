@@ -1,21 +1,25 @@
 class WelcomeController < ApplicationController
+  
+  before_filter do
+    @beats = {rock: :scissors, paper: :rock, scissors: :paper}
+    @options = @beats.keys
+  end 
+  
   def index
   end
   
-  Beats = {Rock: :Scissors, Scissors: :Paper, Paper: :Rock}
-  Options = Beats.keys
-  
   def throw
-    render action: "index"
-    enemy_choice = Options.sample
-    user_choice = params[:user_choice].to_sym
+    @enemy_choice = @options.sample
+    @user_choice = params[:user_choice].to_sym
     
-    if enemy_choice == user_choice
-      flash[:notice] = 'You tied! Play again!' 
-    elsif Beats[user_choice] == enemy_choice
-      flash[:notice] = "#{user_choice} beats #{enemy_choice}. You win! Play again!"
+    @result = 'anything'
+    if @enemy_choice == @user_choice
+      @result = 'Tie' 
+    elsif @beats[@user_choice] == @enemy_choice
+      @result = "Win"
     else
-      flash[:notice] = "#{enemy_choice} beats #{user_choice}. You lose! Play again!"
+      @result = "Lose"
     end
+    render action: "index"
   end
 end
