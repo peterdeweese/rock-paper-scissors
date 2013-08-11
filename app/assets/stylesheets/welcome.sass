@@ -1,103 +1,13 @@
 @import "compass"
-@import "font-awesome"
 
 body
   +background-image(linear-gradient(left, rgba(127,127,127,0.25) 0%, rgba(127,127,127,0.05) 20%, rgba(127,127,127,0.1) 80%, rgba(127,127,127,0.25) 100%))
-  font-family: Trebuchet MS, Helvetica, sans-serif
-  padding-top: 5px
-  background-color: white
-a
-  text-decoration: none
-  
-@font-face
-  font-family: Snake
-  src: url('/fonts/Snake.ttf')
-  
-$slide-size: 262.5px
-$slide-text-width: 230px
-
-.text
-  padding-left: 3px
-
-.header, .slides
-  min-width: $slide-size * 2 + 10
-  max-width: $slide-size * 3 + 10
-  margin-left: auto
-  margin-right: auto
-  margin-top: 10px
-.header
-  h1
-    font-size: 60px
-    color: black
-    letter-spacing: 0.2em
-    text-shadow: 2px 2px 30px #d0d0d0
-
-.flippable
-  @include perspective(1000)
-  .front, .back
-    @include transition(0.9s)
-    @include transform-style
-    position: absolute
-    div
-      @include backface-visibility(hidden)
-  .front
-    z-index: 5
-    @include rotateY(0deg)
-  .back
-    @include backface-visibility(hidden)
-    z-index: 0
-    @include rotateY(-180deg)
-  &:hover
-    .front
-      z-index: 5
-      @include rotateY(180deg)
-    .back
-      z-index: 10
-      @include rotateY(0deg)
-
-.slides
-  margin-left: auto
-  margin-right: auto
-  
-  .slide
-    @extend .flippable
-    display: inline-block
-    position: relative
-    width: $slide-size
-    height: $slide-size
-    color: rgb(35%, 35%, 35%)
-    .front
-      > div
-        position: absolute
-        width: $slide-text-width
-        left: ($slide-size - $slide-text-width) / 2
-        align: center
-        vertical-align: middle
-      img.slide
-        width: 100%
-        height: 100%
-      .title, .description
-        font-family: Snake, Trebuchet MS, Helvetica, sans-serif
-      .title
-        top: 5px
-        font-size: 3.5em
-        text-align: center
-      .description
-        top: 208px
-        font-size: 2em
-        line-height: 0.7em
-    .back
-      width: $slide-size - 60 - 6
-      height: $slide-size - 60 - 6
-      margin: 3px
-      padding: 30px
-      @include border-radius(6px)
-      background-color: hsla(0, 0%, 88%, 0.8)
-      color: black
-      text-align: justify
-      font-size: 1.2em
-
-.stackoverflow
-  float: right
-  opacity: .9
-  margin-right: 3px
+  .main
+    width: 640px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 2em
+    margin-bottom: 2em
+    font-family: Helvetica
+    h1
+      font-size: 200%
