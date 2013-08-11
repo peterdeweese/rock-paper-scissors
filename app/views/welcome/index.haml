@@ -1,5 +1,10 @@
 .main
   %h1 Rock Paper Scissors
-  .field
-  = f.label Choose wisely
-  = f.datetime_select :submit_date
+  %p
+    %form{action:"throw"}
+      %b Choose wisely:
+      %select
+        %option Rock
+        %option Paper
+        %option Scissors
+      = submit_tag 'Throw!'
