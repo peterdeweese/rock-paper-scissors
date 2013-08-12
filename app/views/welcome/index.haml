@@ -14,6 +14,8 @@
     %b Choose your weapon:
   %p
     - @options.each do |option|
-      %a.weapon{href:"throw?user_choice=#{option}"}
+      %a{href:"throw?user_choice=#{option}"}
         %img.weapon{:src => "#{asset_path("#{option}.png")}"}
-        
+  .smallprint
+    Icons courtesy of
+    %a{href:"http://www.visualpharm.com"} visualpharm
